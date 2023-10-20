@@ -1,4 +1,5 @@
 package com.example.coursework2;
+import entity.FileWithPoints;
 import entity.Point;
 import entity.Rectangle;
 
@@ -24,7 +25,7 @@ public class FirstMethod {
     }
 
     static List<Rectangle> findAllSquares(List <Point> list) {
-        try(FileWriter fileWriter = new FileWriter(new File("C:\\Users\\VlasN\\Downloads\\squares.txt"));
+        try(FileWriter fileWriter = new FileWriter(FileWithPoints.getFileFromReader());
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
 
             long now = System.currentTimeMillis();

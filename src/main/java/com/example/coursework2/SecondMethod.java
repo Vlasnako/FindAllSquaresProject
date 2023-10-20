@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
+
+import entity.FileWithPoints;
 import entity.Point;
 import entity.Rectangle;
 
@@ -14,7 +16,7 @@ public static int found;
 static int id;
 
     public static List<Rectangle> findAllSquares(List<Point> points) {
-        try(FileWriter fileWriter = new FileWriter(new File("C:\\Users\\VlasN\\Downloads\\squares.txt"));
+        try(FileWriter fileWriter = new FileWriter(FileWithPoints.getFileFromReader());
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);) {
 
             long now = System.currentTimeMillis();
